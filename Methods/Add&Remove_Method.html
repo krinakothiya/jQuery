@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Add & Remove Class Methods</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        #box {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        .first {
+            background: tan;
+        }
+
+        .second {
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add & Remove Class Methods</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Laborum nostrum voluptate delectus.</p>
+    </div><br>
+    <button id="addbutton">Add Class</button>
+    <button id="removebutton">Remove Class</button>
+    <button id="togglebutton">Toggle Class</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // Add new class :
+        $('#addbutton').click(function () {
+            $('#box,h1').addClass("first second")
+        })
+
+        // remove class : 
+        $('#removebutton').click(function () {
+            $('#box').removeClass("second")
+        })
+
+        // Adds a class if it doesn't exist, and removes it if it does.
+        $('#togglebutton').click(function () {
+            $('#box').toggleClass("second")
+        })
+    })
+</script>
+
+</html>
