@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        #box {
+            border: 1px solid #000;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jquery Selectors</h1>
+    <div id="box" class="test">
+        <h2>Test Box 2</h2>
+        <p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Nam, repellendus veniam pariatur distinctio
+            voluptas assumenda saepe,Quam!</p>
+    </div>
+    <ul id="list">
+        <li>Orange</li>
+        <li class="test">Banana</li>
+        <li>Grapes</li>
+        <li class="test">Apple</li>
+        <li>Guava</li>
+    </ul>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("#list").css("background-color", "green")         // select element width id
+
+            // $("#list").css("border", "2px solid red");
+
+            // $("#list li").css("border", "2px solid red");           // inside the id all li
+
+            // $(".test").css("border", "2px solid red");         // select element width class
+
+            // $("*").css("border", "2px solid brown");        //select all elements
+
+            // $("li:first").css("border", "2px solid red");             // select first elements
+
+            // $("ul li:first-child").css("border", "2px solid red");
+
+            // $("li:last").css("border", "2px solid red");                   //select last elements
+
+            // $("ul li:eq(2)").css("border", "2px solid red");             // select index no.2
+
+            // $("ul li:gt(2)").css("border", "2px solid red");              //select element greater than 2
+
+            $("ul li:lt(3)").css("border", "2px solid red");             //select element less than 3
+
+
+
+        });
+    </script>
+</body>
+
+</html>

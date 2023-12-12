@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border: 2px solid brown;
+        }
+    </style>
+</head>
+
+<body>
+    <P class="first">this is a paragraph</P>
+    <P classs="second">this is a paragraph</P>
+    <P id="test">this is a paragraph</P>
+    <P>this is a paragraph</P>
+
+</body>
+
+<!-- this is downlode jquery file -->
+<!-- <script src="jquery-3.7.1.min.js"></script> -->
+
+<!-- this is CDN link -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // This code will execute only when the DOM is fully loaded
+        $('p').click(function () {
+            alert("pragraph is click")
+        });
+    })
+
+
+</script>
+
+
+</html>

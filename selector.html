@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <P class="first">this is a paragraph 1</P>
+    <P classs="second">this is a paragraph 2</P>
+    <P id="test">this is a paragraph 3</P>
+    <P>this is a paragraph 4</P>
+    <button>click me</button>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        //clicks on all the p elements.
+        // $('p').click();                       //click on p only
+
+        // hide element of class=first :
+        $('p').click(function () {
+            $('.first').hide()
+        });                                 //do this when we click on p
+
+        //hide element of id=test : 
+        $('p').click(function () {
+            $('#test').hide()
+        });
+
+        // hide the curren tag :
+        $('button').click(function () {
+            $(this).hide();
+        })
+
+
+        // other selectors :
+
+
+        // $('button').click(function () {
+        //     $('*').hide() // hide on all the elements
+
+        // })
+
+
+        // $('button').click(function () {
+        //     $('p:first').hide() // hide on first element
+
+        // })
+
+        // $('button').click(function () {
+        //     $('p:last').hide() // hide on last element
+
+        // })
+
+
+    })
+
+</script>
+
+
+</html>

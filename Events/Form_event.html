@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events </title>
+</head>
+
+<body>
+    <h1>Form Events</h1>
+    <form action="" id="form">
+        <label for="">Name : </label><input type="name" id="name"><br><br>
+        <label for="">Class : </label><input type="text" id="class"><br><br>
+        <label for="">Country</label>
+        <select id="country">
+            <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Nepal">Nepal</option>
+        </select><br><br>
+        <input type="submit">
+    </form>
+    <div id="test" style="border:2px solid rgb(234, 127, 127);margin-top:20px;"></div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // Focus Event :
+        $('#name,#class').focus(function () {
+            $(this).css("background-color", "#d4d4c4")
+        })
+
+        // Blur Event :
+        $('#name,#class').blur(function () {
+            $(this).css("background-color", "#137633")
+        })
+
+        // Change Event (only use in select): 
+        $('#country').change(function () {
+            $(this).css("background-color", "#f5bfbf")
+
+            var a = $(this).val();
+            $('#test').html(a);
+        })
+
+        // Select Event (not use select):
+        $('#name,#class').select(function () {
+            $(this).css("background-color", "pink")
+        })
+
+        //submit Event :
+        $('#form').submit(function () {
+            alert("Form Submitted");
+        });
+    })
+
+</script>
+
+</html>

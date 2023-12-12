@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        #box,
+        #box1 {
+            border: 1px solid #000;
+            background: pink;
+            padding: 10px 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Mouse Events</h1>
+    <div id="box" class="test">
+        <h2>Test Box </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, odit? Labore velit iure
+            iusto ex aspernatur
+            numquam quisquam quaerat laudantium! Libero magnam, aspernatur minima sequi excepturi necessitatibus officia
+            reiciendis doloribus?</p>
+        <p>
+            1. key press to change background-color:
+        </p>
+        <p>
+            2. press down arrow to change background-color:
+        </p>
+        <p>
+            3. releases the key than change background-color:
+        </p>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // key press event :
+        $('body').keypress(function () {
+            $(this).css("background-color", "#90c590")
+        })
+
+        // key down(down arrow key) event :
+        $('body').keydown(function () {
+            $(this).css("background-color", "#6f585c")
+        })
+
+        // key up(releases key) event :
+        $('body').keyup(function () {
+            $("#box").css("background-color", "#cc966a")
+        })
+    })
+</script>
+
+</html>
