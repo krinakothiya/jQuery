@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Empty & Remove Method </title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: pink;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jquery Empty & Remove Method </h1>
+    <div id="box">
+        <h2> Text Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit saepe neque placeat tenetur. Quos
+            nesciunt,reprehenderit porro error dolores recusandae enim veritatis. Minima, qui nesciunt ad asperiores
+            quas nobis minus?</p>
+    </div>
+    <br>
+    <button id="emptyBtn">Empty</button>
+    <button id="removeBtn">Remove</button>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // remove all child elements and content  
+        $("#emptyBtn").click(function () {
+            $('#box').empty()
+        })
+
+        //  remove the selected elements
+        $("#removeBtn").click(function () {
+            $('#box').remove()
+        })
+    })
+</script>
+
+</html>

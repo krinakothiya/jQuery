@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append & Prepend Methods</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: rgb(126, 104, 114);
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jquery Append & Prepend Methods </h1>
+    <div id="box">
+        <h2> Text Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit saepe neque placeat tenetur. Quos
+            nesciunt,reprehenderit porro error dolores recusandae enim veritatis. Minima, qui nesciunt ad asperiores
+            quas nobis minus?</p>
+    </div>
+
+    <br>
+    <button id="appendBtn">Append</button>
+    <button id="prependBtn">Prepend</button>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // add content inside an element.
+        // add text at the end  
+        $("#appendBtn").click(function () {
+            $('#box').append("<h2>Append the text</h2>")
+        })
+
+        // add text at the beginning   
+        $("#prependBtn").click(function () {
+            $('#box').prepend("<h2>prepend the text</h2>")
+        })
+
+
+    })
+</script>
+
+</html>

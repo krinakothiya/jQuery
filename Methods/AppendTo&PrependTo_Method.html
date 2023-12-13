@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppendTo() & PrependTo() Method</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: rgb(143, 146, 121);
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AppendTo() & PrependTo() Method</h1>
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </ol>
+    <br>
+    <button id="appendBtn">AppendTo</button>
+    <button id="prependBtn">PrependTo</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // same as a append , only syntax s differences.
+
+        $('#appendBtn').click(function () {
+            $("<li>List Item new</li>").appendTo("ol");
+        });
+
+        $('#prependBtn').click(function () {
+            $("<li>New List Item </li>").prependTo("ol");
+        });
+
+    })
+</script>
+
+</html>
