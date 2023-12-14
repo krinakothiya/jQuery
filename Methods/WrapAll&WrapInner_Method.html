@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WrapAll & WrapInner Method</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #test {
+            background: rgb(205, 100, 117);
+            padding: 5px;
+        }
+
+        .red {
+            color: rgb(153, 213, 218);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WrapAll & WrapInner Method</h1>
+    <p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Veritatis consectetur, esse doloremque iusto sequi
+        quia! Omnis tempora fuga dolore aut quae, placeat reprehenderit minus voluptates, impedit nisi totam cupiditate
+        alias.</p>
+    <p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Veritatis consectetur, esse doloremque iusto sequi
+        quia! Omnis tempora fuga dolore aut quae, placeat reprehenderit minus voluptates, impedit nisi totam cupiditate
+        alias.</p>
+    <br>
+    <button id="wrapAllBtn">WrapAll</button>
+    <button id="wrapInnerBtn">WrapInner</button>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // wrapall element in one tag 
+        $('#wrapAllBtn').click(function () {
+            $('p').wrapAll('<div id="test"> </div>')
+        })
+
+        // it is create child tag(element)  
+        $('#wrapInnerBtn').click(function () {
+            $('h1').wrapInner('<div class="red"> </div>')
+        })
+    })
+</script>
+
+</html>

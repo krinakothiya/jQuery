@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width & Height Methods</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: khaki;
+            padding: 30px;
+            margin: 30px;
+            border: 10px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Width & Height Methods</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, similique quasi. Commodi molestias
+            tempore impedit, quos cumque harum, ad quibusdam fugiat! Earum excepturi assumenda, libero dolores expedita,
+            aliquid provident saepe?</p>
+    </div>
+    <br>
+    <button id="widthBtn">Width</button>
+    <button id="heightBtn">Height</button>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // width
+        $("#widthBtn").click(function () {
+            $("#box").width("400px");      // set width
+
+            console.clear()
+            console.log(`Width : ${$('#box').width()}`);
+            console.log(`innerWidth : ${$('#box').innerWidth()}`);
+            console.log(`outerWidth : ${$('#box').outerWidth()}`);
+            console.log(`outerWidth : ${$('#box').outerWidth(true)}`);
+        })
+
+        // hight
+        $("#heightBtn").click(function () {
+            $("#box").height("500px");        // set hight
+
+            console.clear()
+            console.log(`height : ${$('#box').height()}`);
+            console.log(`innerHeight : ${$('#box').innerHeight()}`);
+            console.log(`outerHeight : ${$('#box').outerHeight()}`);
+            console.log(`outerHeight : ${$('#box').outerHeight(true)}`);
+        })
+    })
+</script>
+
+</html>

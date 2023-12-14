@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap & UnWrap Methods</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: rgb(202, 123, 74);
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        #test {
+            background: pink;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Wrap & UnWrap Methods</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum architecto error incidunt facilis sunt
+            nesciunt? Nisi voluptates, minus cumque natus ipsam distinctio, omnis harum, odio deserunt fuga accusantium
+            possimus placeat.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum architecto error incidunt facilis sunt
+            nesciunt? Nisi voluptates, minus cumque natus ipsam distinctio, omnis harum, odio deserunt fuga accusantium
+            possimus placeat.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum architecto error incidunt facilis sunt
+            nesciunt? Nisi voluptates, minus cumque natus ipsam distinctio, omnis harum, odio deserunt fuga accusantium
+            possimus placeat.</p>
+    </div>
+    <br>
+    <button id="wrapBtn">Wrap</button>
+    <button id="unwrapBtn">Unwrap</button>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // it is create a parent tag of selected element (wrap the element in html tag)
+        $('#wrapBtn').click(function () {
+            $('#box p').wrap('<div id="test"> </div>')
+        })
+
+        // it is remove parent tag 
+        $('#unwrapBtn').click(function () {
+            $('#box p').unwrap()
+        })
+    })
+</script>
+
+</html>

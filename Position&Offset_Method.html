@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Position & Offset Methods </title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: rgb(152, 163, 198);
+            padding: 10px 30px;
+            border: 1px solid #000;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Position & Offset Methods</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor, sit amet</span>, consectetur adipisicing elit. Aperiam, obcaecati quod nisi ipsum
+            velit blanditiis eum facere consequatur iste iure numquam odit rem repellat laudantium tenetur ad eaque,
+            dolore aliquid.</p>
+    </div>
+    <br>
+    <button id="positionBtn">Position</button>
+    <button id="offsetBtn">Offset</button>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // The returned top and left position of selector.
+        $('#positionBtn').click(function () {
+            console.log($("#box h2").position());
+
+        })
+
+        // The returned and set top and left position of selector.
+        $('#offsetBtn').click(function () {
+            console.log($("#box h2").offset({ top: 100, left: 200 }));
+            console.log($("#box h2").offset());
+        })
+    })
+</script>
+
+</html>

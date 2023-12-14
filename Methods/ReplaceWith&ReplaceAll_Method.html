@@ -32,11 +32,22 @@
     </div>
     <br>
     <button id="replaceBtn">Replace</button>
+    <button id="replaceBtnall">ReplaceAll</button>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
+    $(document).ready(function () {
+        // replace the content and html tages
+        $('#replaceBtn').click(function () {
+            $('p:first').replaceWith("Lorem ipsum dolor")
+        })
 
+        // replace the text with only html tages
+        $('#replaceBtnall').click(function () {
+            $("<p>New content</p>").replaceAll("#box p")
+        })
+    })
 </script>
 
 </html>
