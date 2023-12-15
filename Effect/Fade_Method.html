@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Method</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: rgb(141, 177, 205);
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> fadeIn, fadeOut, fadeToggle, fadeTo Method</h1>
+    <div id="box">
+        <h2 class="test">Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Laborum nostrum voluptate delectus.</p>
+    </div>
+    <br>
+    <button id="fadeOutBtn">fadeOut</button>
+    <button id="fadeInBtn">fadeIn</button>
+    <button id="fadeToggleBtn">fadeToggle</button>
+    <button id="fadeToBtn">fadeTo</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // Hide the selected element with fade effect 
+        $('#fadeOutBtn').click(function () {
+            // $("#box").fadeOut()
+            $("#box").fadeOut(2000)
+        })
+
+        // show the selected element with fade effect 
+        $('#fadeInBtn').click(function () {
+            // $("#box").fadeIn()
+            $("#box").fadeIn(2000)
+        })
+
+        //  elements are visible than it hide, if they are hidden than it shows with fade effect .
+        $('#fadeToggleBtn').click(function () {
+            // $("#box").fadeToggle()
+            $("#box").fadeToggle(2000)
+        })
+
+        // fadeTo
+        $('#fadeToBtn').click(function () {
+            // $("#box").fadeTo()
+            // $("#box").fadeTo(2000, 0.4)               //(speed,opacity(0 to 1),callback)
+            $("#box").fadeTo(2000, 0.4, function () {
+                $('body').css("background-color", "#90c590")
+            })
+        })
+    })
+</script>
+
+</html>

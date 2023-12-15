@@ -34,7 +34,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('#hasClassBtn').click()
+        $('#hasClassBtn').click(function () {
+
+            // checks specified class is available or not
+            console.log($('#box h2').hasClass("test"));
+            console.log($('#box').hasClass("test"));
+        })
     })
 </script>
 

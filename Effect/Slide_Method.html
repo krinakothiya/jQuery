@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> slideUp , slideDown & SlideToggle Methods</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: rgb(202, 136, 136);
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>slideUp , slideDown & SlideToggle Methods</h1>
+    <h1>jQuery slideDown & slideUp Method</h1>
+    <div id="box">
+        <h2 class="test">Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Laborum nostrum voluptate delectus.</p>
+    </div>
+    <br>
+    <button id="slideUpBtn">slideUp</button>
+    <button id="slideDownBtn">slideDown</button>
+    <button id="slideToggleBtn">slideToggle</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // hide the selected elements by sliding them up
+        $('#slideUpBtn').click(function () {
+            $("#box").slideUp("slow")
+        })
+
+        // show the selected elements by sliding them down 
+        $('#slideDownBtn').click(function () {
+            $("#box").slideDown("slow")
+        })
+
+        // hide if they visibal and show if they hide by sliding them
+        $('#slideToggleBtn').click(function () {
+            $("#box").slideToggle("slow")
+        })
+    })
+</script>
+
+</html>

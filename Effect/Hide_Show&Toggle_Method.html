@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide , Show & Toggle</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            background: rgb(117, 163, 176);
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Hide , Show & Toggle Method</h1>
+    <div id="box">
+        <h2 class="test">Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Laborum nostrum voluptate delectus.</p>
+    </div>
+    <br>
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="toggleBtn">Toggle</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // Hide the selected element
+        $('#hideBtn').click(function () {
+            // $("#box").hide()
+            // $("#box").hide("slow");
+            // $("#box").hide("fast");
+            $("#box").hide(2000, function () {
+                console.log("hide the content");
+            });
+        })
+
+        // Show the selected element
+        $('#showBtn').click(function () {
+            // $("#box").show("slow")
+            // $("#box").show("fast")
+            $("#box").show(2000, function () {
+                console.log("show the content");
+            });
+        })
+
+        // elements are visible than it hide, if they are hidden than it shows.
+        $('#toggleBtn').click(function () {
+            // $("#box").toggle("slow")
+            // $("#box").toggle("fast")
+            $("#box").toggle(2000, function () {
+                console.log("toggle the content");
+            });
+        })
+    })
+</script>
+
+</html>
