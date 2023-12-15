@@ -17,7 +17,7 @@
         #box {
             width: 230px;
             height: 80px;
-            background: rgb(168, 167, 161);
+            background: rgb(149, 156, 149);
             padding: 10px;
             border: 1px solid #000;
             position: fixed;
@@ -27,8 +27,8 @@
     </style>
 </head>
 
-<body>
-    <h1>Scroll Method</h1>
+<body style="width: 600px">
+    <h1> scrollTop & scrollLeft Method</h1>
     <button id="scrolltopBtn">scrollTop</button>
     <button id="scrollleftBtn">scrollLeft</button>
     <br><br>
@@ -105,10 +105,26 @@
         totam maiores.</p>
     <div id="box"></div>
 </body>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
+    $(document).ready(function () {
 
+        $(window).scroll(function () {
+            $("#box").html(" ")
+            $("#box").append(`Top : ${$(window).scrollTop()}`)
+            $("#box").append(`<br> Left : ${$(window).scrollLeft()}`)
+        })
+
+        // scroll window top to bottom
+        $('#scrolltopBtn').click(function () {
+            $(window).scrollTop(200)
+        })
+
+        // scroll window left to right
+        $('#scrollleftBtn').click(function () {
+            $(window).scrollLeft(100)
+        })
+    })
 </script>
 
 </html>
