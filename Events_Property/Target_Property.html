@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Target Property </title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            border: 2px solid #08070f;
+            background: pink;
+            padding: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Target Property</h1>
+    <div id="box">
+        <h2>Text Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe, libero nihil magni in vitae eaque
+            iure eligendi minima, iste, officia facere atque quidem aliquam eius laborum provident corporis nemo?</p>
+        <button>Test Button</button>
+    </div>
+    <h3></h3>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#box').click(function (event) {
+            $('h3').html("Target Element: " + event.target.nodeName)   // Returns which DOM element triggered the event
+        })                                                             // nodeName return tag name
+    })
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preventDefault Property</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            border: 2px solid #08070f;
+            background: pink;
+            padding: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>preventDefault Property</h1>
+    <div id="box">
+        <a href="https://jquery.com/" id="result"> Jquery Website(preventDefault)</a>
+        <br> <br>
+        <a href="https://jquery.com/" target="_blank"> Jquery Website</a>
+    </div>
+    <h2></h2>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#result').click(function (event) {
+            event.preventDefault()                     //  the default action of the event
+
+            var a = event.isDefaultPrevented();        // check the preventDefault() was called for the event object or not
+            $('h2').html(a)
+        })
+
+    })
+</script>
+
+</html>

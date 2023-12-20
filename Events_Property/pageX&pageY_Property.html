@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> pageX & pageY Property</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #result {
+            border: 1px solid #6c5ce7;
+            background: #bfbcdc;
+            width: 400px;
+            height: 400px;
+        }
+
+        #box {
+            border: 1px solid #e15f41;
+            background: #e77f67;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> pageX & pageY Property </h1>
+    <div id="result"></div>
+    <div id="box"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(window).mousemove(function (event) {
+            $('#result').text("X: " + event.pageX + " Y: " + event.pageY);    // Returns the mouse position relative to the x any y
+
+            var x = event.pageX
+            var y = event.pageY
+            $('#box').offset({ top: y, left: x })
+        })
+    })
+</script>
+
+</html>

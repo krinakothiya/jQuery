@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> which Property </title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            border: 1px solid #6c5ce7;
+            background: #a2a1b7;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> which Property</h1>
+    <div id="box"></div>
+    <br>
+    <input type="text" id="inputbox">
+    <br>
+    <h2 id="first"></h2>
+    <br>
+    <h2 id="second"></h2>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#box').on('click contextmenu mousedown ', function (event) {
+            $('#first').text(`${event.type} : ${event.which}`)    // 
+        })
+
+        $('#inputbox').keypress(function (event) {
+            $('#second').text(`${event.type} : ${event.which}`)
+        })
+    })
+</script>
+
+</html>

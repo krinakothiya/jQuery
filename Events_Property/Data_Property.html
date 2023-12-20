@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Property</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #box {
+            border: 2px solid #040404;
+            background: pink;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Data Property</h1>
+    <div id="box">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ducimus ipsa perspiciatis, in sed
+            exercitationem aut provident ab vero molestiae. Sint praesentium libero, rerum consequuntur quae sequi ea
+            voluptas placeat!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint tempora fuga a eaque magnam nulla vero magni,
+            modi pariatur fugiat ut recusandae maiores dignissimos repellat dolore illo soluta libero quibusdam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nemo fuga a, repellendus delectus eveniet
+            tenetur vero quis reiciendis, autem ad obcaecati facere in et maiores quo impedit quod aut!</p>
+    </div>
+    <h2></h2>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('p').each(function (i) {
+            $(this).on("click", { var: i }, function (event) {
+                // $('h2').text(event.data.var)
+                $('h2').text("The " + $(this).index() + ". paragraph has data: " + event.data.var)    // used to access the custom data associated with an event(starting from 0).
+
+            })
+
+        })
+    })
+</script>
+
+</html>
