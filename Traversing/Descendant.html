@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendant Method</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #main-outer {
+            border: 1px solid #8e44ad;
+            background: #817aeb6b;
+            padding: 10px 10px;
+            width: 600px;
+            height: 590px;
+            margin: 0 auto;
+        }
+
+        #outer {
+            border: 1px solid #ff9f43;
+            background: #fdcb6ed1;
+            padding: 10px 10px;
+            width: 550px;
+            height: 485px;
+            margin: 0 auto;
+        }
+
+        #inner {
+            border: 1px solid #f78fb3;
+            background: pink;
+            padding: 10px 10px;
+            width: 500px;
+            height: 369px;
+            margin: 0 auto;
+        }
+
+        #inner div {
+            border: 1px solid #3dc1d3;
+            background: #d2f7fc;
+            padding: 10px 10px;
+            width: 70px;
+            height: 100px;
+            display: inline-block;
+            text-align: center;
+            margin: 53px 15px 0 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Descendant Method</h1>
+    <div id="main-outer" style="position: relative;">
+        <h2>Main outer</h2>
+        <div id="outer">
+            <h2>Outer</h2>
+            <div id="inner">
+                <h2>Inner</h2>
+                <div class="test">A</div>
+                <div>B</div>
+                <div id="child-C">C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#inner').children().css('background', '#e0e37f');      // returns all direct children of the selected element.
+        // $('#inner').children('#child-C').css('background', '#e0e37f');      
+        $('#main-outer').find('.test').css('background', 'palevioletred');        // It considers all descendants(children), not just the immediate children. 
+    })
+</script>
+
+</html>

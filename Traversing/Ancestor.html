@@ -34,7 +34,7 @@
 
         #inner {
             border: 1px solid #f78fb3;
-            background: #f0c1d2e6;
+            background: pink;
             padding: 10px 10px;
             width: 500px;
             height: 369px;
@@ -73,11 +73,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        // $('#child-C').parent().css('background', 'pink');                // get parent element of selector
-        // $('#inner').parents().css('background', 'rgb(84 124 85)');    //get all parent elements
-        // $('#child-C').parentsUntil('#main-outer').css('background', 'rgb(84 124 85)');     // Gets all ancestors up to, but not including, an element with id '#main-outer'
-        // $('#child-C').offsetParent().css('background', 'rgb(84 124 85)');      // gets the closest positioned ancestor (or the body element if no positioned ancestor is found) of an element.
-        $('#child-C').closest('div').css('background', '#e0e37f');         // get first parent  element in the set of matched elements 
+        // $('#child-C').parent().css('background', 'pink');                // return parent element of selector
+        // $('#inner').parents().css('background', 'rgb(84 124 85)');    // return all parents element of selector
+        // $('#child-C').parentsUntil('#main-outer').css('background', 'rgb(84 124 85)');     // return all ancestors up to, but not including, an element with id '#main-outer'
+        // $('#child-C').offsetParent().css('background', 'rgb(84 124 85)');      // return the closest positioned ancestor (or the body element if no positioned ancestor is found) of an element.
+        $('#child-C').closest('div').css('background', '#e0e37f');         // return first parent  element in the set of matched elements 
 
     })
 </script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Each Method</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Each Method</h1>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('li').each(function () {         //Executes a function for each matched element
+            console.log($(this).text())
+        })
+    })
+</script>
+
+</html>

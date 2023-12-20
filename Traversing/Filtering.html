@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering Method</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        #first {
+            background-color: pink;
+            border: 3px solid rgb(34, 35, 34);
+            padding: 19px;
+            margin: 25px;
+        }
+
+        #second {
+            background-color: pink;
+            border: 3px solid rgb(34, 35, 34);
+            padding: 19px;
+            margin: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Filtering Method</h1>
+    <div id="first">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quae placeat magni suscipit corrupti, quis
+            quo. Autem ullam nisi magni obcaecati dolore reiciendis, nostrum accusamus quaerat est, nesciunt voluptates
+            illo. </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aperiam reiciendis fugit! Consequuntur eum
+            nisi ratione ullam. Animi sequi blanditiis illo perspiciatis ex possimus, omnis laudantium recusandae.
+            Facilis, magnam amet?</p>
+    </div>
+    <br>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    <br>
+    <div id="second">
+        <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium illo tempore
+            necessitatibus
+            doloribus quibusdam obcaecati amet sit qui quaerat animi, recusandae sint nobis accusantium tempora, quas
+            perspiciatis, mollitia est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium illo tempore necessitatibus
+            doloribus quibusdam obcaecati amet sit qui quaerat animi, recusandae sint nobis accusantium tempora, quas
+            perspiciatis, mollitia est.</p>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('p').first().css('background', 'rgb(105 192 200)');            // return first element of selector
+        $('p').last().css('background', 'rgb(105 192 200)');            // return last element of selector
+
+        $('li').eq(1).css('background', 'rgb(105 192 200)');            // return an element with a specific index number  element of selector
+        $('ul li').eq(-1).css('background', 'rgb(105 192 200)');           // last element
+
+        // $('p').filter('.test').css('background', 'rgb(105 192 200)');      // return  the set of matched elements.
+
+        // $('p').not('.test').css('background', 'rgb(105 192 200)');      // returns all elements that do not match the criteria.
+
+        // $('ul li').slice(0, 3).css('background', 'rgb(105 192 200)');      // slice(startIndex, endIndex);
+    })
+</script>
+
+</html>
